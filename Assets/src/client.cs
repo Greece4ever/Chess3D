@@ -87,7 +87,6 @@ public class client : MonoBehaviour
     }
 
     public void onSubmit() {
-        print("submitted");
         string value = input.text;
         if (value.Length == 0) 
             return;
@@ -196,6 +195,9 @@ public class client : MonoBehaviour
         CHESS.BLACK_ID = this.BLACK_ID;
         CHESS.WHITE_ID = this.WHITE_ID;
 
+        CHESS.winnerBlack = this.winnerBlack;
+        CHESS.winnerWhite = this.winnerWhite;
+
         CHESS.__init__dicts();
         CHESS.__init__();
         CHESS.init_dead_positions();
@@ -255,7 +257,6 @@ public class client : MonoBehaviour
 
     void handle_message(IDictionary<string, string> MSG)
     {
-        print(MSG["type"]);
         switch (MSG["type"].ToLower()) {
             case "admin_msg":
                 if (!started) {
@@ -399,8 +400,6 @@ public class client : MonoBehaviour
 
     void Update()
     {
-        print($"Chess is {CHESS.turn}, Movements is {CHESS.movements.turn}");
-
         if (!awaiting)
         {
             bool ReceiveAsync = client_socket.ReceiveAsync(e);

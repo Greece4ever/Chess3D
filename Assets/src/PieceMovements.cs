@@ -512,9 +512,6 @@ public class PieceMovements {
         Debug.Log($"Turn is {turn}");
         Debug.Log($"Row, Col is {row}, {col}");
 
-
-        this.PrintArray2d(boardArray, 8, 8);
-
         List<int[]> Cords2d = new List<int[]>();
         switch (type) {
             case "solider":

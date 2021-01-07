@@ -7,11 +7,6 @@ using System.Linq;
 
 public class objectSelect : MonoBehaviour
 {
-
-    void OnCollisionEnter(Collision collision) {
-        print($"Print collided with object of tag {collision.gameObject.tag}!");
-    }
-
     public AudioSource MOVE_AUDIO;
 
     /* Piece's Gameobject References */
@@ -180,7 +175,6 @@ public class objectSelect : MonoBehaviour
 
 
     public void setTurn(string color) {
-        print($"Setting turn to {color}");
         this.turn = color;
         movements.turn = color;
 

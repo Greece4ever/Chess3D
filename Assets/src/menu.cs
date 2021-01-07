@@ -153,7 +153,6 @@ public class menu : MonoBehaviour
         AddListener(IP_INPUT,       16);
         AddListener(PORT_INPUT,      5);
         AddListener(USERNAME_INPUT, 16);
-
     }
 
     string get_text_box(GameObject input, string set_string=null) {
