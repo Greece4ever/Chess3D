@@ -32,8 +32,6 @@ public class orbitControl : MonoBehaviour
 
     void Start()
     {
-        // OTHER -> https://www.cgtrader.com/items/2386070/download-page
-        // HORSE -> https://free3d.com/user/printable_models
         this.rotationX = cameraControl.localRotation.eulerAngles.x;
         this.rotationY = cameraControl.localRotation.eulerAngles.y;
         Vector3 InitialPosition = cameraControl.transform.position;
